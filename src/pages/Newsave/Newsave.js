@@ -25,7 +25,6 @@ function NewSave() {
   useEffect(() => {}, [switchModal])
 
   const newSave = () => {
-    // { type: 'film', name: 'Testere (2001)', score: 9 }
     setList([...list, { type, name, score }])
     setSwitchModal(true)
   }
