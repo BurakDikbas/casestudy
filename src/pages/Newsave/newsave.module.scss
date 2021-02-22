@@ -1,0 +1,60 @@
+@import './../../style/sass/index.scss';
+
+.page {
+  @include alignment;
+  max-width: 1071px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+  flex-direction: column;
+  text-align: center;
+
+  .newSaveForm {
+    @include alignment;
+    flex-direction: column;
+    .radiosGroup {
+      display: inline-block;
+      margin-top: 20px;
+
+      .radioslabel {
+        color: rgb(15, 14, 14) (134, 134, 134);
+        margin-right: 20px;
+        .radios {
+          color: $btn-color;
+        }
+      }
+    }
+
+    .MovieSeriesInput {
+      margin-top: 20px;
+      width: 300px;
+      padding: 5px 5px;
+      input {
+        height: 0.5em;
+        ::placeholder {
+          text-align: center;
+        }
+      }
+    }
+
+    .pointInput {
+      @include alignment;
+      padding: 5px 5px;
+      margin-top: 20px;
+      width: 150px;
+      input {
+        height: 0.5em;
+      }
+    }
+
+    .save {
+      color: $btn-text-color;
+      background-color: $btn-color;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import './../../style/sass/index.scss';
+
+.nav {
+  background-color: $bg-light-grey;
+  align-items: center;
+  height: 70px;
+  margin: 0 auto;
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+
+  > div:first-child {
+    max-width: 1071px;
+    width: 100%;
+    @include alignment;
+  }
+
+  p {
+    color: $text-color;
+  }
+
+  .filters {
+    display: flex;
+    .root {
+      margin: 10px;
+      position: relative;
+
+      button {
+        @include alignment;
+        color: $btn-text-color;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: $btn-color;
+        outline: none;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+    .dropdownOne {
+      position: absolute;
+      min-width: 100px;
+      top: 50px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      border: 1px solid;
+      padding: 10px;
+      background-color: $bg-light-grey;
+      color: #000;
+
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        li {
+          @include alignment;
+        }
+      }
+    }
+    .dropdownTwo {
+      position: absolute;
+      min-width: 175px;
+      top: 50px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      border: 1px solid;
+      padding: 10px;
+      background-color: $bg-light-grey;
+      color: #000;
+
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        :hover {
+          color: $btn-color;
+        }
+        li {
+          @include alignment;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .newSaveLink {
+    text-decoration: none;
+
+    .newSave {
+      color: $btn-text-color;
+      background-color: $btn-color;
+      text-decoration: none;
+      .backIcon {
+        font-size: 10px;
+      }
+    }
+  }
+  .title {
+    color: $text-color;
+    font-size: 22px;
+  }
+}

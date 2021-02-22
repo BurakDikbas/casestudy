@@ -1,0 +1,53 @@
+@import './../../style/sass/index.scss';
+
+.card {
+  background-color: $bg-light-grey;
+  @include alignment;
+  max-width: 1071px;
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  padding: 10px;
+  margin-top: 20px;
+
+  .watch {
+    @include alignment;
+    width: 200px;
+    &:hover {
+      svg {
+        display: block;
+      }
+    }
+    svg {
+      display: none;
+    }
+  }
+  .score {
+    @include alignment;
+    .star {
+      color: gold;
+      margin: 3px;
+      font-size: 30px;
+    }
+    .starpoints {
+      font-weight: 600;
+      font-size: large;
+    }
+  }
+  .point {
+    @include alignment;
+    flex-direction: column;
+
+    .pointdescription {
+      font-size: small;
+    }
+    .pointiconup {
+      color: green;
+      font-size: 25px;
+    }
+    .pointicondown {
+      color: red;
+      font-size: 25px;
+    }
+  }
+}
